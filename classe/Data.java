@@ -1,20 +1,21 @@
 package classe;
 
 public class Data {
-    short dia;
-    byte mes;
-    short ano;
+    int dia;
+    int mes;
+    int ano;
 
     Data() {
-        dia = 1;
-        mes = 1;
-        ano = 1970;
+        // dia = 1;
+        // mes = 1;
+        // ano = 1970;
+        this(1, 1, 1970);
     }
 
-    Data(short day, byte month, short year) {
-        dia = day;
-        mes = month;
-        ano = year;
+    Data(int dia, int mes, int ano) {
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
     }
 
     String obterDataFormatada() {

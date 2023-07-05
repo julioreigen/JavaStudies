@@ -2,7 +2,7 @@ package classe;
 
 public class DataTeste {
     public static void main(String[] args) {
-        Data inicio = new Data((short) 7, (byte) 2, (short) 2023);
+        Data inicio = new Data(7, 2, 2023);
         
         Data finalizacao = new Data();
         finalizacao.ano = 2025;
