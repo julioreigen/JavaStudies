@@ -1,13 +1,12 @@
 package oo.composicao.desafio;
 
 public class Produto {
-    String nameProduct;
-    double priceProduct;
-    Produto () {}
+    final String nomeProduto;
+    final double precoProduto;
 
-    Produto (String getProductName, double getProductPrice) {
-        this.nameProduct = getProductName;
-        this.priceProduct = getProductPrice;
+    Produto(String nomeProduto, double precoProduto){
+        this.nomeProduto = nomeProduto;
+        this.precoProduto = precoProduto;
     }
 
 }

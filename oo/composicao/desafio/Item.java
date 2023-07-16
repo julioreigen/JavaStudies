@@ -1,11 +1,11 @@
 package oo.composicao.desafio;
 
 public class Item {
-    int qntdItem;
-    Produto product;
+    final int qntdItem;
+    final Produto produto;
 
-    Item(Produto getProduct, int getQntdItem) {
-        qntdItem = getQntdItem;
-        product = getProduct;
+    Item(Produto produto, int qntdItem) {
+        this.qntdItem = qntdItem;
+        this.produto = produto;
     }
 }

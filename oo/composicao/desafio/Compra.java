@@ -4,23 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Compra {
-    List<Item> items;
+    final List<Item> itens = new ArrayList<>();
 
-    Compra() {
-        this.items = new ArrayList<>();
-    }
-    void addItem(Item item) {
-        items.add(item);
-    }
-    void removeItem(Item item) {
-        items.add(item);
-    }
-    double getPurchasePrice () {
-        double total_purchase = 0;
-        for (Item i: items) {
-            total_purchase += i.product.priceProduct * i.qntdItem;
+    void adicionarItem(Item i) {
+        itens.add(i);
         }
-        return total_purchase;
+    void adicionarItem(String nome, double preco, int qtde) {
+        var produto = new Produto(nome, preco);
+        this.itens.add(new Item(produto, qtde));
     }
 
+    double obterCompraValor() {
+        double valorCompra = 0.0;
+        for (Item i : itens) {
+            valorCompra += i.produto.precoProduto * i.qntdItem;
+        }
+        return valorCompra;
+    }
 }

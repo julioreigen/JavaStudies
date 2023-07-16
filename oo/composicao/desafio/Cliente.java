@@ -4,22 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-    String nameClient;
-    List<Compra> list = new ArrayList<>();
+    List<Compra>  carrinho = new ArrayList<>();
+    String nome;
 
-    Cliente(String getClientName) {
-        nameClient = getClientName;
+    Cliente(String nome) {
+        this.nome = nome;
     }
 
-    void addPurchase(Compra compra) {
-        list.add(compra);
+    void adicionarCarrinho(Compra compra){
+        carrinho.add(compra);
     }
 
-    double getTotalValue() {
-        double total = 0.0;
-        for (Compra c: list) {
-            total += c.getPurchasePrice();
+    double obterValorTotal() {
+        double valorTotal = 0.0;
+        for (Compra c: carrinho) {
+            valorTotal += c.obterCompraValor();
         }
-        return total;
+        return valorTotal;
+    }
+    int obterProdutos() {
+        int totalP = 0;
+        for (Compra compra: carrinho) {
+            for (Item i: compra.itens) {
+                totalP += i.qntdItem;
+            }
+        }
+        return totalP;
     }
 }
