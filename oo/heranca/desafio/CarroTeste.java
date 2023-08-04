@@ -1,6 +1,6 @@
 package oo.heranca.desafio;
 
-public class InterfaceCarro {
+public class CarroTeste {
     public static void main(String[] args) {
 
         Carro civic = new Civic();
@@ -26,6 +26,7 @@ public class InterfaceCarro {
 
         System.out.println("\nFerrari:");
         System.out.println(ferrari);
+        System.out.println(ferrari.velocidadeDoAr());
         ferrari.acelerar();
         System.out.println(ferrari);
         ferrari.acelerar();
