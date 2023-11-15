@@ -1,5 +1,7 @@
 package streams_08;
 
+import excecao_09.Aluno;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
