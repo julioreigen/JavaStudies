@@ -1,9 +1,0 @@
-package controle_02;
-
-public class For2 {
-    public static void main(String[] args) {
-        for (int c = 10; c >= 0; c -= 2) {
-            System.out.printf("Contador = %d\n", c);
-        }
-    }
-}
