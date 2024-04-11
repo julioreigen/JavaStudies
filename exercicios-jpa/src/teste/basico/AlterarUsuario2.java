@@ -1,10 +1,12 @@
-package modelo.basico;
+package teste.basico;
+
+import modelo.basico.Usuario;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class AlterarUsuario3 {
+public class AlterarUsuario2 {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
         EntityManager em = emf.createEntityManager();
@@ -14,11 +16,7 @@ public class AlterarUsuario3 {
 
         // Encontra o usuário pelo Id e altera o nome e o email
         Usuario usuario = em.find(Usuario.class, 7L);
-        usuario.setNome("Leonardo");
-        em.detach(usuario);
-
-        // Mescla as informações alteradas com outras informações do usuário que estão no banco
-        em.merge(usuario);
+        usuario.setNome("Leonardo Alterador");
 
         // Envia a transação para o banco.
         em.getTransaction().commit();

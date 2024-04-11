@@ -1,4 +1,6 @@
-package modelo.basico;
+package teste.basico;
+
+import modelo.basico.Usuario;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

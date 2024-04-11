@@ -1,15 +1,22 @@
 package modelo.basico;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "produtos")
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "prod_nome", length = 150, nullable = false)
     private String nome;
+    @Column(name = "prod_preco", precision = 11, scale = 2, nullable = false)
     private Double preco;
 
     public Produto() {}
 
-    public Produto(Long id, String nome, Double preco) {
-        this.id = id;
+    public Produto(String nome, Double preco) {
         this.nome = nome;
         this.preco = preco;
     }

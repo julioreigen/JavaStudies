@@ -1,4 +1,6 @@
-package modelo.basico;
+package teste.basico;
+
+import modelo.basico.Usuario;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,7 +12,7 @@ public class ObterUsuario {
                 createEntityManagerFactory("exercicios-jpa");
         EntityManager em = emf.createEntityManager();
 
-        Usuario usuario = em.find(Usuario.class, 7L);
+        Usuario usuario = em.find(Usuario.class, 1L);
         System.out.printf("Usuário encontrado: %s\n", usuario.getNome());
 
         em.close();
