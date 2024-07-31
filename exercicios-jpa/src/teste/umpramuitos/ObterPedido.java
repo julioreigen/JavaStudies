@@ -9,12 +9,12 @@ public class ObterPedido {
         Dao<Pedido> dao = new Dao<>(Pedido.class);
 
         Pedido pedido = dao.obterPorId(1L);
+        dao.fechar();
 
         for (ItemPedido item: pedido.getItens()) {
             System.out.println(item.getQuantidade());
             System.out.println(item.getProduto().getNome());
         }
 
-        dao.fechar();
     }
 }

@@ -12,7 +12,9 @@ public class Pedido {
     private Long id;
     @Column(nullable = false)
     private Date data;
-    @OneToMany(mappedBy = "pedido")
+
+    // LAZY é o valor padrão de fetch quando '...ToMany' -> Lazy
+    @OneToMany(mappedBy = "pedido", fetch = FetchType.LAZY)
     private List<ItemPedido> itens;
 
     public Pedido() {
