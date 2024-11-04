@@ -18,7 +18,7 @@ public class Caixa extends HBox {
     };
 
     public Caixa() {
-        this(100,100);
+        this(5,5);
     }
 
     public Caixa(int largura, int altura) {
