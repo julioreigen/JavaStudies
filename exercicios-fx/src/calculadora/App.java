@@ -15,7 +15,7 @@ public class App extends Application {
 	private double posY = 0;
 
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) {
 		Font.loadFont(Objects.requireNonNull(getClass().getResource("/calculadora/Roboto.ttf")).toExternalForm(), 10);
 		String css = Objects.requireNonNull(getClass().getResource("/calculadora/Calculadora.css")).toExternalForm();
 
